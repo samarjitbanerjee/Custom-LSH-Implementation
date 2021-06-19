@@ -6,7 +6,7 @@ Steps followed to implement the same.
 1) Perform Spliting Train and Test Data on the Review Data. Test Data Labels are NAN. Train Labels are 'tech', 'business', 'sport', 'entertainment', 'politics'.
 2) Implement TFIDFVectorizer on the Train Data(Perform fit_Transform operation on Train Data) and  make use of both bigrams & trigrams and also limit the max features to 4000 and minimum document frequency to 10
 3) Create Random 5 hyperplanes where values of the vector has to be taken from Standard Normal Distribution.
-4) Implement custom Hashfunction to calculate the dot product between transformed TFIDFVector of Train Data and each Weight Vector, if the value(scaler)[Dot product of (1*4000).(4000*1)]
+4) Implement custom Hashfunction to calculate the dot product between transformed TFIDFVector of Train Data and each Weight Vector, if the value(scaler)[Dot product of (1x4000).(4000x1)]
 is < 0 mark the value as '-1', else '+1' and create a hashtable where the key should be the values obtained from dot product and value should be the index of the Datapoint and Data Array
 5) Use the above implemented hashfunction in the Test Data after performing only TFIDFVectorizer Transform operation on Test Data and based on the hastable key value obtained 
 from the dot product of test data and weight vector, we will determine the nearest points.
